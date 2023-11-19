@@ -1,0 +1,16 @@
+pedido#	numero	usuario	fechahora	tipopago	importe total	recibidoEfectivo/numeroTarjeta	vueltoEfectivo/nombreTarjeta
+pedido	1	1	2023/11/10 17:50:38	efectivo	900	1000	100
+detalle#	idProducto	cantidad	precio				
+detalle	1	2	300				
+detalle	5	1	250				
+detalle	6	1	350				
+fin pedido							
+							
+pedido#	numero	usuario	fechahora	tipopago	importe total	recibidoEfectivo/numeroTarjeta	vueltoEfectivo/nombreTarjeta
+pedido	2	3	2023/11/11 12:27:20	tarjeta	600	1234	juan perez
+detalle#	idProducto	cantidad	precio				
+detalle	2	1	150				
+detalle	4	1	200				
+detalle	10	1	100				
+detalle	11	1	150				
+fin pedido							
