@@ -36,9 +36,24 @@ namespace ComidaRapida
             return numero;
         }
 
-        public string GetFechaHora()
+        public Usuario GetUsuario()
+        {
+            return usuario;
+        }
+
+        public string GetFechaHoraString()
         {
             return fechaHora.ToString();
+        }
+
+        public DateTime GetFechaHora()
+        {
+            return fechaHora;
+        }
+
+        public Pago GetPago ()
+        {
+            return pago;
         }
 
         public List<DetallePedido> GetListaProductos()

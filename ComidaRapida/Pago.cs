@@ -15,6 +15,8 @@ namespace ComidaRapida
             this.importeTotal = importeTotal;
         }
 
+        abstract public string GetPagoExport();
+
         public float GetImporteTotal()
         {
             return importeTotal;

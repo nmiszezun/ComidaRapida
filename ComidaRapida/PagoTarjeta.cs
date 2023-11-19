@@ -16,5 +16,10 @@ namespace ComidaRapida
             this.numero = numero;
             this.nombre = nombre;
         }
+
+        public override string GetPagoExport ()
+        {
+            return "tarjeta\t" + GetImporteTotal() + "\t" + numero + "\t" + nombre;
+        }
     }
 }

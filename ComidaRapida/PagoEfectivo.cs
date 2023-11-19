@@ -26,5 +26,10 @@ namespace ComidaRapida
         {
             return vueltoEntregado;
         }
+
+        public override string GetPagoExport ()
+        {
+            return "efectivo\t" + GetImporteTotal() + "\t" + efectivoRecibido + "\t" + vueltoEntregado;
+        }
     }
 }

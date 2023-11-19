@@ -19,9 +19,14 @@ namespace ComidaRapida
             this.precio = precio;
         }
 
-        public string GetProducto ()
+        public string GetProductoString ()
         {
             return producto.ToString();
+        }
+
+        public Producto GetProducto ()
+        {
+            return producto;
         }
 
         public int GetCantidad ()

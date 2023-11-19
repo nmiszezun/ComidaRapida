@@ -20,10 +20,10 @@ namespace ComidaRapida
             List<Pedido> pedidos = new List<Pedido>();
 
             CargarUsuarios(usuarios);
-            /*foreach (Usuario usuario in usuarios)
+            foreach (Usuario usuario in usuarios)
             {
                 Console.WriteLine(usuario);
-            }*/
+            }
 
             CargarProductos(productos);
             /*foreach (Producto producto in productos)
@@ -36,6 +36,8 @@ namespace ComidaRapida
             {
                 Console.WriteLine(pedido);
             }
+
+            GuardarPedidos(pedidos);
             /*
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
@@ -211,6 +213,65 @@ namespace ComidaRapida
                     detalle = new List<DetallePedido>();
                 }
             }
+        }
+
+        static void GuardarUsuarios (List<Usuario> lista)
+        {
+            string ubicacion = $"C:\\ComidaRapida\\usuarios2.txt";
+            StreamWriter sw = new StreamWriter(ubicacion);
+            
+            string texto = "";
+            foreach (Usuario usuario in lista)
+            {
+                texto += usuario.GetId() + "\t" + usuario.GetNombre() + "\t" + usuario.GetClave() + "\n";
+            }
+
+            sw.Write(texto);
+            sw.Close();
+        }
+
+        static void GuardarProductos(List<Producto> lista)
+        {
+            string ubicacion = $"C:\\ComidaRapida\\productos2.txt";
+            StreamWriter sw = new StreamWriter(ubicacion);
+
+            string texto = "";
+            foreach (Producto producto in lista)
+            {
+                texto += producto.GetId() + "\t"+
+                    producto.GetNombre() + "\t" +
+                    producto.GetStock() + "\t" +
+                    producto.GetPrecio() + "\n";
+            }
+
+            sw.Write(texto);
+            sw.Close();
+        }
+
+        static void GuardarPedidos(List<Pedido> lista)
+        {
+            string ubicacion = $"C:\\ComidaRapida\\pedidos2.txt";
+            StreamWriter sw = new StreamWriter(ubicacion);
+
+            string texto = "";
+            foreach (Pedido pedido in lista)
+            {
+                texto += "pedido" + "\t" +
+                    pedido.GetNumero() + "\t" +
+                    pedido.GetUsuario().GetId() + "\t" +
+                    pedido.GetFechaHora().ToString("yyyy/MM/dd HH:mm:ss") + "\t" +
+                    pedido.GetPago().GetPagoExport() + "\n";
+                foreach (DetallePedido dp in pedido.GetListaProductos())
+                {
+                    texto += "detalle" + "\t" +
+                        dp.GetProducto().GetId() + "\t" +
+                        dp.GetCantidad() + "\t" +
+                        dp.GetPrecio() + "\n";
+                }
+            }
+
+            sw.Write(texto);
+            sw.Close();
         }
     }
 }
