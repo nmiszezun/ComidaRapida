@@ -20,8 +20,8 @@ namespace ComidaRapida
         private void nuevoPedidoButton_Click(object sender, EventArgs e)
         {
            
-            var pedido = new PedidoProductos();
-            pedido.Show();
+            //var pedido = new PedidoProductos();
+            //pedido.Show();
         }
 
         private void minimizePic_Click(object sender, EventArgs e)

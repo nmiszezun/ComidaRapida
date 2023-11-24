@@ -18,12 +18,13 @@ namespace ComidaRapida
             List<Usuario> usuarios = new List<Usuario>();
             List<Producto> productos = new List<Producto>();
             List<Pedido> pedidos = new List<Pedido>();
+            Pedido pedidoActual = new Pedido();
 
             CargarUsuarios(usuarios);
-            foreach (Usuario usuario in usuarios)
+            /*foreach (Usuario usuario in usuarios)
             {
                 Console.WriteLine(usuario);
-            }
+            }*/
 
             CargarProductos(productos);
             /*foreach (Producto producto in productos)
@@ -32,16 +33,23 @@ namespace ComidaRapida
             }*/
 
             CargarPedidos(pedidos, usuarios, productos);
-            foreach (Pedido pedido in pedidos)
+            /*foreach (Pedido pedido in pedidos)
             {
                 Console.WriteLine(pedido);
-            }
+            }*/
 
-            GuardarPedidos(pedidos);
-            /*
+            //GuardarPedidos(pedidos);
+
+            /*pedidoActual = new Pedido(123, usuarios.ElementAt(0));
+            pedidoActual.SetPago(new PagoEfectivo(0, 0, 0));
+            pedidoActual.AddProducto(productos.ElementAt(0), 1);
+            pedidoActual.AddProducto(productos.ElementAt(3), 2);
+            */
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());*/
+            Application.Run(new Login());
         }
 
         static void CargarUsuarios (List<Usuario> lista)

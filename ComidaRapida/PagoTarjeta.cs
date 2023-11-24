@@ -21,5 +21,10 @@ namespace ComidaRapida
         {
             return "tarjeta\t" + GetImporteTotal() + "\t" + numero + "\t" + nombre;
         }
+
+        public override string ToString()
+        {
+            return $"Tarjeta nro. {numero}, titular: {nombre}, importe: $ {GetImporteTotal()}";
+        }
     }
 }

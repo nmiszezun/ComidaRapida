@@ -52,7 +52,7 @@ namespace ComidaRapida
             cancelarButton.BackColor = System.Drawing.Color.Red;
             cancelarButton.FlatAppearance.BorderSize = 0;
             cancelarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            cancelarButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cancelarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cancelarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             cancelarButton.Location = new System.Drawing.Point(12, 386);
             cancelarButton.Name = "cancelarButton";
@@ -106,11 +106,11 @@ namespace ComidaRapida
             // pedidoLabel
             // 
             this.pedidoLabel.AutoSize = true;
-            this.pedidoLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pedidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pedidoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pedidoLabel.Location = new System.Drawing.Point(104, 145);
             this.pedidoLabel.Name = "pedidoLabel";
-            this.pedidoLabel.Size = new System.Drawing.Size(196, 32);
+            this.pedidoLabel.Size = new System.Drawing.Size(191, 31);
             this.pedidoLabel.TabIndex = 1;
             this.pedidoLabel.Text = "Pedido actual";
             // 
@@ -118,33 +118,33 @@ namespace ComidaRapida
             // 
             this.agregarLabel.AutoSize = true;
             this.agregarLabel.BackColor = System.Drawing.Color.Transparent;
-            this.agregarLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregarLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.agregarLabel.Location = new System.Drawing.Point(104, 32);
             this.agregarLabel.Name = "agregarLabel";
-            this.agregarLabel.Size = new System.Drawing.Size(251, 32);
+            this.agregarLabel.Size = new System.Drawing.Size(239, 31);
             this.agregarLabel.TabIndex = 2;
             this.agregarLabel.Text = "Agregar producto";
             // 
             // agregarComboBox
             // 
             this.agregarComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.agregarComboBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregarComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.agregarComboBox.FormattingEnabled = true;
             this.agregarComboBox.Location = new System.Drawing.Point(235, 77);
             this.agregarComboBox.Name = "agregarComboBox";
-            this.agregarComboBox.Size = new System.Drawing.Size(349, 29);
+            this.agregarComboBox.Size = new System.Drawing.Size(349, 28);
             this.agregarComboBox.TabIndex = 3;
             this.agregarComboBox.Text = "(seleccionar producto)";
             // 
             // cantidadInput
             // 
-            this.cantidadInput.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cantidadInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cantidadInput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.cantidadInput.Location = new System.Drawing.Point(109, 75);
             this.cantidadInput.Name = "cantidadInput";
-            this.cantidadInput.Size = new System.Drawing.Size(120, 31);
+            this.cantidadInput.Size = new System.Drawing.Size(120, 29);
             this.cantidadInput.TabIndex = 4;
             // 
             // totalLabel
@@ -159,10 +159,10 @@ namespace ComidaRapida
             // 
             // totalTextBox
             // 
-            this.totalTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.totalTextBox.Location = new System.Drawing.Point(578, 338);
             this.totalTextBox.Name = "totalTextBox";
-            this.totalTextBox.Size = new System.Drawing.Size(100, 27);
+            this.totalTextBox.Size = new System.Drawing.Size(100, 26);
             this.totalTextBox.TabIndex = 6;
             this.totalTextBox.Text = "$ 0,00";
             this.totalTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -170,7 +170,7 @@ namespace ComidaRapida
             // agregarButton
             // 
             this.agregarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
-            this.agregarButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.agregarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.agregarButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.agregarButton.Location = new System.Drawing.Point(590, 78);
             this.agregarButton.Name = "agregarButton";
@@ -178,13 +178,14 @@ namespace ComidaRapida
             this.agregarButton.TabIndex = 7;
             this.agregarButton.Text = "Agregar";
             this.agregarButton.UseVisualStyleBackColor = false;
+            this.agregarButton.Click += new System.EventHandler(this.agregarButton_Click);
             // 
             // confirmarButton
             // 
             this.confirmarButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(218)))), ((int)(((byte)(21)))));
             this.confirmarButton.FlatAppearance.BorderSize = 0;
             this.confirmarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmarButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmarButton.ForeColor = System.Drawing.Color.Black;
             this.confirmarButton.Location = new System.Drawing.Point(588, 386);
             this.confirmarButton.Name = "confirmarButton";

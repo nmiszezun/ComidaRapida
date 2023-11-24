@@ -12,9 +12,26 @@ namespace ComidaRapida
 {
     public partial class PedidoConfirmar : Form
     {
-        public PedidoConfirmar()
+        Pedido pedidoActual;
+
+        public PedidoConfirmar(Pedido pedidoActual)
         {
+            this.pedidoActual = pedidoActual;
             InitializeComponent();
+            MostrarValores();
+        }
+
+        private void MostrarValores ()
+        {
+            string texto = "";
+            foreach (DetallePedido dp in pedidoActual.GetListaProductos())
+            {
+                texto += dp.ToString();
+                texto += "\r\n";
+            }
+            pedidoTextBox.Text = texto;
+
+            pagoTextBox.Text = pedidoActual.GetPago().ToString();
         }
 
         private void minimPic_Click(object sender, EventArgs e)

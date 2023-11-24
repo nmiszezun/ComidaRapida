@@ -21,5 +21,10 @@ namespace ComidaRapida
         {
             return importeTotal;
         }
+
+        public void SetImporteTotal(float importe)
+        {
+            importeTotal = importe;
+        }
     }
 }

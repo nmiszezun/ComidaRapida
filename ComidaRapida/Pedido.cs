@@ -31,6 +31,11 @@ namespace ComidaRapida
             this.listaProductos = detalle;
         }
 
+        public Pedido ()
+        {
+            listaProductos = new List<DetallePedido>();
+        }
+
         public int GetNumero()
         {
             return numero;
@@ -56,6 +61,11 @@ namespace ComidaRapida
             return pago;
         }
 
+        public void SetPago (Pago pago)
+        {
+            this.pago = pago;
+        }
+
         public List<DetallePedido> GetListaProductos()
         {
             return listaProductos;
@@ -63,7 +73,8 @@ namespace ComidaRapida
 
         public void AddProducto(Producto producto, int cantidad)
         {
-            //listaProductos.Add(producto);
+            listaProductos.Add(new DetallePedido(producto, cantidad));
+            pago.SetImporteTotal(pago.GetImporteTotal() + producto.GetPrecio() * cantidad);
         }
 
         public override string ToString()

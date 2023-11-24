@@ -31,5 +31,10 @@ namespace ComidaRapida
         {
             return "efectivo\t" + GetImporteTotal() + "\t" + efectivoRecibido + "\t" + vueltoEntregado;
         }
+
+        public override string ToString()
+        {
+            return $"Efectivo: $ {GetImporteTotal()}";
+        }
     }
 }
