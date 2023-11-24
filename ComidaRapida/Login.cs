@@ -17,6 +17,8 @@ namespace ComidaRapida
         List<Pedido> pedidos;
         Pedido pedidoActual;
 
+        Usuario usuarioLogueado;
+
         public Login(List<Usuario> usuarios, List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual)
         {
             this.usuarios = usuarios;
@@ -28,8 +30,22 @@ namespace ComidaRapida
 
         private void ingresarButton_Click(object sender, EventArgs e)
         {
-            var menuPrincipal = new MenuPrincipal(productos, pedidos, pedidoActual);
-            menuPrincipal.Show();
+            foreach (Usuario us in usuarios)
+            {
+                if (us.GetNombre() == usuarioTextBox.Text) {
+                    if (us.GetClave() == contraseniaTextBox.Text)
+                    {
+                        usuarioLogueado = us;
+                        break;
+                    }
+                }
+            }
+
+            if (usuarioLogueado != null)
+            {
+                var menuPrincipal = new MenuPrincipal(productos, pedidos, pedidoActual, usuarioLogueado);
+                menuPrincipal.Show();
+            }
         }
 
         private void usuarioTextBox_MouseEnter(object sender, EventArgs e)

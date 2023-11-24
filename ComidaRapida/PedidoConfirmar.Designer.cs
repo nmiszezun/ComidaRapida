@@ -101,6 +101,7 @@ namespace ComidaRapida
             this.emitirButton.TabIndex = 14;
             this.emitirButton.Text = "Confirmar pedido";
             this.emitirButton.UseVisualStyleBackColor = false;
+            this.emitirButton.Click += new System.EventHandler(this.emitirButton_Click);
             // 
             // cancelarPedidoButton
             // 

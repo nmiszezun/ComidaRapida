@@ -12,12 +12,14 @@ namespace ComidaRapida
 {
     public partial class PedidoPago : Form
     {
+        List<Pedido> pedidos;
         Pedido pedidoActual;
         float pagado;
         float vuelto;
 
-        public PedidoPago(Pedido pedidoActual)
+        public PedidoPago(List<Pedido> pedidos, Pedido pedidoActual)
         {
+            this.pedidos = pedidos;
             this.pedidoActual = pedidoActual;
             InitializeComponent();
             importeTotalTextBox.Text = $"$ {pedidoActual.GetPago().GetImporteTotal()}";
@@ -75,7 +77,7 @@ namespace ComidaRapida
                 pedidoActual.SetPago(pt);
             }
 
-            var pc = new PedidoConfirmar(pedidoActual);
+            var pc = new PedidoConfirmar(pedidos, pedidoActual);
             pc.Show();
         }
 

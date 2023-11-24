@@ -44,7 +44,7 @@ namespace ComidaRapida
             this.nuevoPedidoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.nuevoPedidoButton.FlatAppearance.BorderSize = 0;
             this.nuevoPedidoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.nuevoPedidoButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nuevoPedidoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nuevoPedidoButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.nuevoPedidoButton.Location = new System.Drawing.Point(194, 78);
             this.nuevoPedidoButton.Name = "nuevoPedidoButton";
@@ -59,7 +59,7 @@ namespace ComidaRapida
             this.productosButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.productosButton.FlatAppearance.BorderSize = 0;
             this.productosButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productosButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productosButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.productosButton.Location = new System.Drawing.Point(194, 188);
             this.productosButton.Name = "productosButton";
@@ -79,6 +79,7 @@ namespace ComidaRapida
             this.salirButton.TabIndex = 2;
             this.salirButton.Text = "Salir";
             this.salirButton.UseVisualStyleBackColor = false;
+            this.salirButton.Click += new System.EventHandler(this.exitPic_Click);
             // 
             // minimizePic
             // 

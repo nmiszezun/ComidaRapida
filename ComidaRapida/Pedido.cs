@@ -43,9 +43,19 @@ namespace ComidaRapida
             return numero;
         }
 
+        public void SetNumero (int numero)
+        {
+            this.numero = numero;
+        }
+
         public Usuario GetUsuario()
         {
             return usuario;
+        }
+
+        public void SetUsuario (Usuario usuario)
+        {
+            this.usuario = usuario;
         }
 
         public string GetFechaHoraString()
@@ -56,6 +66,11 @@ namespace ComidaRapida
         public DateTime GetFechaHora()
         {
             return fechaHora;
+        }
+
+        public void SetFechaHora(DateTime fechaHora)
+        {
+            this.fechaHora = fechaHora;
         }
 
         public Pago GetPago ()

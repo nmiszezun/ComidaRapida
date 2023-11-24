@@ -13,12 +13,14 @@ namespace ComidaRapida
     public partial class PedidoProductos : Form
     {
         List<Producto> listaProductos;
+        List<Pedido> pedidos;
         Pedido pedidoActual;
         DataTable tablaDetalle;
 
-        public PedidoProductos(List<Producto> listaProductos, Pedido pedidoActual)
+        public PedidoProductos(List<Producto> listaProductos, List<Pedido> pedidos, Pedido pedidoActual)
         {
             this.listaProductos = listaProductos; //temporal, hasta ser reemplazado por una llamada a la BD
+            this.pedidos = pedidos; //temporal, hasta ser reemplazado por una llamada a la BD
             this.pedidoActual = pedidoActual; //temporal, hasta ser reemplazado por una llamada a la BD
             InitializeComponent();
             LlenarComboBox();
@@ -146,7 +148,7 @@ namespace ComidaRapida
 
         private void confirmarButton_Click(object sender, EventArgs e)
         {
-            var pp = new PedidoPago(pedidoActual);
+            var pp = new PedidoPago(pedidos, pedidoActual);
             pp.Show();
         }
 

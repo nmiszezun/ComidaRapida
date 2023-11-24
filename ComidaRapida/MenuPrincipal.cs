@@ -15,18 +15,21 @@ namespace ComidaRapida
         List<Producto> productos;
         List<Pedido> pedidos;
         Pedido pedidoActual;
+        Usuario usuarioLogueado;
 
-        public MenuPrincipal(List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual)
+        public MenuPrincipal(List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual, Usuario usuario)
         {
             this.productos = productos;
             this.pedidos = pedidos;
             this.pedidoActual = pedidoActual;
+            this.usuarioLogueado = usuario;
             InitializeComponent();
         }
 
         private void nuevoPedidoButton_Click(object sender, EventArgs e)
         {
-            var pp = new PedidoProductos(productos, pedidoActual);
+            pedidoActual.SetUsuario(usuarioLogueado);
+            var pp = new PedidoProductos(productos, pedidos, pedidoActual);
             pp.Show();
         }
 
