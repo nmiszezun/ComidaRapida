@@ -16,5 +16,25 @@ namespace ComidaRapida
         {
             InitializeComponent();
         }
+
+        private void medioDePagoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PedidoPago_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void minPic1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void exitPic1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
