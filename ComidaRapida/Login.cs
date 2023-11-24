@@ -23,11 +23,6 @@ namespace ComidaRapida
             menuPrincipal.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void usuarioTextBox_MouseEnter(object sender, EventArgs e)
         {
             if (usuarioTextBox.Text == "USUARIO")

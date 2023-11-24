@@ -20,6 +20,7 @@ namespace ComidaRapida
             fechaHora = DateTime.Now;
             listaProductos = new List<DetallePedido>();
             this.usuario = usuario;
+            pago = new PagoEfectivo(0, 0, 0);
         }
 
         public Pedido (int numero, Usuario usuario, DateTime fechaHora, Pago pago, List<DetallePedido> detalle)
@@ -34,6 +35,7 @@ namespace ComidaRapida
         public Pedido ()
         {
             listaProductos = new List<DetallePedido>();
+            pago = new PagoEfectivo(0, 0, 0);
         }
 
         public int GetNumero()

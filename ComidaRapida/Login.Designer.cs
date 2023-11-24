@@ -48,11 +48,11 @@ namespace ComidaRapida
             // 
             this.usuarioTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(230)))), ((int)(((byte)(226)))));
             this.usuarioTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usuarioTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.usuarioTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.usuarioTextBox.Location = new System.Drawing.Point(320, 133);
             this.usuarioTextBox.Name = "usuarioTextBox";
-            this.usuarioTextBox.Size = new System.Drawing.Size(408, 20);
+            this.usuarioTextBox.Size = new System.Drawing.Size(408, 19);
             this.usuarioTextBox.TabIndex = 0;
             this.usuarioTextBox.Text = "USUARIO";
             this.usuarioTextBox.MouseEnter += new System.EventHandler(this.usuarioTextBox_MouseEnter);
@@ -61,11 +61,11 @@ namespace ComidaRapida
             // 
             this.contraseniaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(230)))), ((int)(((byte)(226)))));
             this.contraseniaTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.contraseniaTextBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contraseniaTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.contraseniaTextBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.contraseniaTextBox.Location = new System.Drawing.Point(320, 186);
             this.contraseniaTextBox.Name = "contraseniaTextBox";
-            this.contraseniaTextBox.Size = new System.Drawing.Size(408, 20);
+            this.contraseniaTextBox.Size = new System.Drawing.Size(408, 19);
             this.contraseniaTextBox.TabIndex = 1;
             this.contraseniaTextBox.Text = "CONTRASEÑA";
             this.contraseniaTextBox.Leave += new System.EventHandler(this.contraseniaTextBox_Leave);
@@ -78,7 +78,7 @@ namespace ComidaRapida
             this.ingresarButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
             this.ingresarButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ingresarButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ingresarButton.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ingresarButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ingresarButton.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.ingresarButton.Location = new System.Drawing.Point(320, 288);
             this.ingresarButton.Name = "ingresarButton";
@@ -101,14 +101,13 @@ namespace ComidaRapida
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.GrayText;
             this.label1.Location = new System.Drawing.Point(467, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 33);
+            this.label1.Size = new System.Drawing.Size(99, 31);
             this.label1.TabIndex = 6;
             this.label1.Text = "LOGIN";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnMinimizar
             // 

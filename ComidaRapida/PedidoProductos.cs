@@ -14,13 +14,17 @@ namespace ComidaRapida
     {
         List<Producto> listaProductos;
         Pedido pedidoActual;
+        DataTable tablaDetalle;
 
         public PedidoProductos(List<Producto> listaProductos, Pedido pedidoActual)
         {
             this.listaProductos = listaProductos; //temporal, hasta ser reemplazado por una llamada a la BD
             this.pedidoActual = pedidoActual; //temporal, hasta ser reemplazado por una llamada a la BD
             InitializeComponent();
-            llenarComboBox();
+            LlenarComboBox();
+            CrearDataTable();
+            LlenarDataTable();
+            MostrarDataTable();
         }
 
         private void PedidoProductos_Load(object sender, EventArgs e)
@@ -28,7 +32,73 @@ namespace ComidaRapida
 
         }
 
-        private void llenarComboBox()
+        private void CrearDataTable()
+        {
+            DataColumn columna;
+            tablaDetalle = new DataTable("Detalle");
+
+            // agregar columna "cantidad"
+            columna = new DataColumn();
+            columna.DataType = typeof(Int32);
+            columna.ColumnName = "cantidad";
+            columna.Caption = "Cant";
+            columna.ReadOnly = false;
+            columna.Unique = false;
+            tablaDetalle.Columns.Add(columna);
+
+            // agregar columna "producto"
+            columna = new DataColumn();
+            columna.DataType = typeof(String);
+            columna.ColumnName = "producto";
+            columna.Caption = "Producto";
+            columna.ReadOnly = false;
+            columna.Unique = false;
+            tablaDetalle.Columns.Add(columna);
+
+            // agregar columna "precio"
+            columna = new DataColumn();
+            columna.DataType = typeof(float);
+            columna.ColumnName = "precio";
+            columna.Caption = "Precio";
+            columna.ReadOnly = false;
+            columna.Unique = false;
+            tablaDetalle.Columns.Add(columna);
+        }
+
+        private void LlenarDataTable()
+        {
+            DataRow fila;
+
+            foreach (DetallePedido dp in pedidoActual.GetListaProductos())
+            {
+                fila = tablaDetalle.NewRow();
+                fila["cantidad"] = dp.GetCantidad();
+                fila["producto"] = dp.GetProducto().GetNombre();
+                fila["precio"] = dp.GetPrecio();
+                tablaDetalle.Rows.Add(fila);
+            }
+        }
+
+        private void AgregarUltimaFilaDataTable()
+        {
+            DetallePedido dp = pedidoActual.GetListaProductos().Last();
+            DataRow fila;
+
+            fila = tablaDetalle.NewRow();
+            fila["cantidad"] = dp.GetCantidad();
+            fila["producto"] = dp.GetProducto().GetNombre();
+            fila["precio"] = dp.GetPrecio();
+            tablaDetalle.Rows.Add(fila);
+        }
+
+        private void MostrarDataTable()
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = tablaDetalle;
+            pedidoGrid.DataSource = bs;
+        }
+
+        private void LlenarComboBox()
         {
             string[] listaComboBox = new string[listaProductos.Count()];
             for (int i = 0; i < listaProductos.Count(); i++)
@@ -38,7 +108,7 @@ namespace ComidaRapida
             agregarComboBox.Items.AddRange(listaComboBox);
         }
 
-        private void actualizarLista()
+        private void ActualizarLista()
         {
             // los valores están en el grid, pero no los muestra
 
@@ -58,7 +128,9 @@ namespace ComidaRapida
             int cantidadAgregar = (int)cantidadInput.Value;
             pedidoActual.AddProducto(productoAgregar, cantidadAgregar);
 
-            actualizarLista();
+            AgregarUltimaFilaDataTable();
+
+            //ActualizarLista();
         }
     }
 }

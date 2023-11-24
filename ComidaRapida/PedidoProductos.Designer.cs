@@ -31,9 +31,6 @@ namespace ComidaRapida
         {
             System.Windows.Forms.Button cancelarButton;
             this.pedidoGrid = new System.Windows.Forms.DataGridView();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pedidoLabel = new System.Windows.Forms.Label();
             this.agregarLabel = new System.Windows.Forms.Label();
             this.agregarComboBox = new System.Windows.Forms.ComboBox();
@@ -66,42 +63,11 @@ namespace ComidaRapida
             this.pedidoGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pedidoGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pedidoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.pedidoGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cantidad,
-            this.Producto,
-            this.Precio});
             this.pedidoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.pedidoGrid.Location = new System.Drawing.Point(109, 182);
             this.pedidoGrid.Name = "pedidoGrid";
             this.pedidoGrid.Size = new System.Drawing.Size(569, 150);
             this.pedidoGrid.TabIndex = 0;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cant";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Cantidad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Cantidad.Width = 50;
-            // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Producto.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Producto.Width = 400;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            this.Precio.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Precio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Precio.Width = 75;
             // 
             // pedidoLabel
             // 
@@ -226,9 +192,6 @@ namespace ComidaRapida
         #endregion
 
         private System.Windows.Forms.DataGridView pedidoGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.Label pedidoLabel;
         private System.Windows.Forms.Label agregarLabel;
         private System.Windows.Forms.ComboBox agregarComboBox;
