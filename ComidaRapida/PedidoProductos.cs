@@ -148,8 +148,16 @@ namespace ComidaRapida
 
         private void confirmarButton_Click(object sender, EventArgs e)
         {
-            var pp = new PedidoPago(pedidos, pedidoActual);
-            pp.Show();
+            var listaForm = Application.OpenForms.OfType<PedidoPago>();
+            if (listaForm.Count() > 0)
+            {
+                listaForm.ElementAt(0).Show();
+            }
+            else
+            {
+                var pp = new PedidoPago(pedidos, pedidoActual);
+                pp.Show();
+            }
         }
 
         private void cancelarButton_Click(object sender, EventArgs e)

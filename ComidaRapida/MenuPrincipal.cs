@@ -29,8 +29,17 @@ namespace ComidaRapida
         private void nuevoPedidoButton_Click(object sender, EventArgs e)
         {
             pedidoActual.SetUsuario(usuarioLogueado);
-            var pp = new PedidoProductos(productos, pedidos, pedidoActual);
-            pp.Show();
+
+            var listaForm = Application.OpenForms.OfType<PedidoProductos>();
+            if (listaForm.Count() > 0)
+            {
+                listaForm.ElementAt(0).Show();
+            }
+            else
+            {
+                var pp = new PedidoProductos(productos, pedidos, pedidoActual);
+                pp.Show();
+            }
         }
 
         private void minimizePic_Click(object sender, EventArgs e)

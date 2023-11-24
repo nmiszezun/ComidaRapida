@@ -43,8 +43,16 @@ namespace ComidaRapida
 
             if (usuarioLogueado != null)
             {
-                var menuPrincipal = new MenuPrincipal(productos, pedidos, pedidoActual, usuarioLogueado);
-                menuPrincipal.Show();
+                var listaForm = Application.OpenForms.OfType<MenuPrincipal>();
+                if (listaForm.Count() > 0)
+                {
+                    listaForm.ElementAt(0).Show();
+                }
+                else
+                {
+                    var menuPrincipal = new MenuPrincipal(productos, pedidos, pedidoActual, usuarioLogueado);
+                    menuPrincipal.Show();
+                }
             }
         }
 

@@ -77,8 +77,16 @@ namespace ComidaRapida
                 pedidoActual.SetPago(pt);
             }
 
-            var pc = new PedidoConfirmar(pedidos, pedidoActual);
-            pc.Show();
+            var listaForm = Application.OpenForms.OfType<PedidoConfirmar>();
+            if (listaForm.Count() > 0)
+            {
+                listaForm.ElementAt(0).Show();
+            }
+            else
+            {
+                var pc = new PedidoConfirmar(pedidos, pedidoActual);
+                pc.Show();
+            }
         }
 
         private void pagadoTextBox_TextChanged(object sender, EventArgs e)
