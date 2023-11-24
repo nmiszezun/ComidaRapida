@@ -163,6 +163,7 @@ namespace ComidaRapida
             this.volverButton.TabIndex = 11;
             this.volverButton.Text = "Volver";
             this.volverButton.UseVisualStyleBackColor = false;
+            this.volverButton.Click += new System.EventHandler(this.volverButton_Click);
             // 
             // confirmarButton
             // 

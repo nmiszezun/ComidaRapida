@@ -12,14 +12,23 @@ namespace ComidaRapida
 {
     public partial class Login : Form
     {
-        public Login()
+        List<Usuario> usuarios;
+        List<Producto> productos;
+        List<Pedido> pedidos;
+        Pedido pedidoActual;
+
+        public Login(List<Usuario> usuarios, List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual)
         {
+            this.usuarios = usuarios;
+            this.productos = productos;
+            this.pedidos = pedidos;
+            this.pedidoActual = pedidoActual;
             InitializeComponent();
         }
 
         private void ingresarButton_Click(object sender, EventArgs e)
         {
-            var menuPrincipal = new MenuPrincipal();
+            var menuPrincipal = new MenuPrincipal(productos, pedidos, pedidoActual);
             menuPrincipal.Show();
         }
 

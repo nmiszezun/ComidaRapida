@@ -13,6 +13,8 @@ namespace ComidaRapida
     public partial class PedidoPago : Form
     {
         Pedido pedidoActual;
+        float pagado;
+        float vuelto;
 
         public PedidoPago(Pedido pedidoActual)
         {
@@ -60,8 +62,8 @@ namespace ComidaRapida
             {
                 PagoEfectivo pe = new PagoEfectivo(
                     pedidoActual.GetPago().GetImporteTotal(),
-                    float.Parse(pagadoTextBox.Text),
-                    float.Parse(vueltoTextBox.Text));
+                    pagado,
+                    vuelto);
                 pedidoActual.SetPago(pe);
             }
             else
@@ -72,14 +74,18 @@ namespace ComidaRapida
                     nombreTextBox.Text);
                 pedidoActual.SetPago(pt);
             }
+
+            var pc = new PedidoConfirmar(pedidoActual);
+            pc.Show();
         }
 
         private void pagadoTextBox_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                float pagado = float.Parse(pagadoTextBox.Text);
-                vueltoTextBox.Text = $"$ {(pagado - pedidoActual.GetPago().GetImporteTotal()).ToString()}";
+                pagado = float.Parse(pagadoTextBox.Text);
+                vuelto = pagado - pedidoActual.GetPago().GetImporteTotal();
+                vueltoTextBox.Text = $"$ {vuelto}";
             }
             catch (Exception expt)
             {
@@ -96,6 +102,11 @@ namespace ComidaRapida
         private void tarjetaRadioButton_CheckedChanged(object sender, EventArgs e)
         {
             SeleccionarTarjeta();
+        }
+
+        private void volverButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

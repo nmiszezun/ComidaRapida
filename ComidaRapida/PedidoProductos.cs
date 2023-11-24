@@ -128,9 +128,31 @@ namespace ComidaRapida
             int cantidadAgregar = (int)cantidadInput.Value;
             pedidoActual.AddProducto(productoAgregar, cantidadAgregar);
 
-            AgregarUltimaFilaDataTable();
+            CambiarTotal();
 
+            AgregarUltimaFilaDataTable();
             //ActualizarLista();
+        }
+
+        private void CambiarTotal()
+        {
+            float suma = 0;
+            foreach (DetallePedido dp in pedidoActual.GetListaProductos())
+            {
+                suma += dp.GetPrecio();
+            }
+            totalTextBox.Text = $"$ {suma}";
+        }
+
+        private void confirmarButton_Click(object sender, EventArgs e)
+        {
+            var pp = new PedidoPago(pedidoActual);
+            pp.Show();
+        }
+
+        private void cancelarButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -57,6 +57,7 @@ namespace ComidaRapida
             cancelarButton.TabIndex = 8;
             cancelarButton.Text = "Cancelar";
             cancelarButton.UseVisualStyleBackColor = false;
+            cancelarButton.Click += new System.EventHandler(this.cancelarButton_Click);
             // 
             // pedidoGrid
             // 
@@ -159,6 +160,7 @@ namespace ComidaRapida
             this.confirmarButton.TabIndex = 9;
             this.confirmarButton.Text = "Confirmar pedido";
             this.confirmarButton.UseVisualStyleBackColor = false;
+            this.confirmarButton.Click += new System.EventHandler(this.confirmarButton_Click);
             // 
             // PedidoProductos
             // 

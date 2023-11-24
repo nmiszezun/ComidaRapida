@@ -47,11 +47,11 @@ namespace ComidaRapida
             // chequearPedidoLabel
             // 
             this.chequearPedidoLabel.AutoSize = true;
-            this.chequearPedidoLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chequearPedidoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chequearPedidoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.chequearPedidoLabel.Location = new System.Drawing.Point(30, 29);
             this.chequearPedidoLabel.Name = "chequearPedidoLabel";
-            this.chequearPedidoLabel.Size = new System.Drawing.Size(225, 32);
+            this.chequearPedidoLabel.Size = new System.Drawing.Size(218, 31);
             this.chequearPedidoLabel.TabIndex = 0;
             this.chequearPedidoLabel.Text = "Verificar pedido";
             // 
@@ -59,7 +59,7 @@ namespace ComidaRapida
             // 
             this.pedidoTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.pedidoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pedidoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pedidoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pedidoTextBox.Location = new System.Drawing.Point(36, 85);
             this.pedidoTextBox.Multiline = true;
             this.pedidoTextBox.Name = "pedidoTextBox";
@@ -70,22 +70,22 @@ namespace ComidaRapida
             // chequearPagoLabel
             // 
             this.chequearPagoLabel.AutoSize = true;
-            this.chequearPagoLabel.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chequearPagoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chequearPagoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.chequearPagoLabel.Location = new System.Drawing.Point(30, 247);
             this.chequearPagoLabel.Name = "chequearPagoLabel";
-            this.chequearPagoLabel.Size = new System.Drawing.Size(202, 32);
+            this.chequearPagoLabel.Size = new System.Drawing.Size(195, 31);
             this.chequearPagoLabel.TabIndex = 2;
             this.chequearPagoLabel.Text = "Verificar pago";
             // 
             // pagoTextBox
             // 
             this.pagoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pagoTextBox.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pagoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pagoTextBox.Location = new System.Drawing.Point(36, 294);
             this.pagoTextBox.Name = "pagoTextBox";
             this.pagoTextBox.ReadOnly = true;
-            this.pagoTextBox.Size = new System.Drawing.Size(517, 23);
+            this.pagoTextBox.Size = new System.Drawing.Size(517, 22);
             this.pagoTextBox.TabIndex = 3;
             // 
             // emitirButton
@@ -93,7 +93,7 @@ namespace ComidaRapida
             this.emitirButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(218)))), ((int)(((byte)(21)))));
             this.emitirButton.FlatAppearance.BorderSize = 0;
             this.emitirButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.emitirButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emitirButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emitirButton.ForeColor = System.Drawing.Color.Black;
             this.emitirButton.Location = new System.Drawing.Point(309, 386);
             this.emitirButton.Name = "emitirButton";
@@ -107,7 +107,7 @@ namespace ComidaRapida
             this.cancelarPedidoButton.BackColor = System.Drawing.Color.Red;
             this.cancelarPedidoButton.FlatAppearance.BorderSize = 0;
             this.cancelarPedidoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancelarPedidoButton.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelarPedidoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelarPedidoButton.ForeColor = System.Drawing.Color.White;
             this.cancelarPedidoButton.Location = new System.Drawing.Point(12, 386);
             this.cancelarPedidoButton.Name = "cancelarPedidoButton";
@@ -115,14 +115,14 @@ namespace ComidaRapida
             this.cancelarPedidoButton.TabIndex = 13;
             this.cancelarPedidoButton.Text = "Cancelar pedido";
             this.cancelarPedidoButton.UseVisualStyleBackColor = false;
-            //this.cancelarPedidoButton.Click += new System.EventHandler(this.cancelarPedidoButton_Click);
+            this.cancelarPedidoButton.Click += new System.EventHandler(this.cancelarPedidoButton_Click);
             // 
             // editarPedidoButton
             // 
             this.editarPedidoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.editarPedidoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.editarPedidoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editarPedidoButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editarPedidoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editarPedidoButton.ForeColor = System.Drawing.Color.Black;
             this.editarPedidoButton.Location = new System.Drawing.Point(580, 123);
             this.editarPedidoButton.Name = "editarPedidoButton";
@@ -130,13 +130,14 @@ namespace ComidaRapida
             this.editarPedidoButton.TabIndex = 15;
             this.editarPedidoButton.Text = "Editar pedido";
             this.editarPedidoButton.UseVisualStyleBackColor = false;
+            this.editarPedidoButton.Click += new System.EventHandler(this.editarPedidoButton_Click);
             // 
             // editarPagoButton
             // 
             this.editarPagoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.editarPagoButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.editarPagoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editarPagoButton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editarPagoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.editarPagoButton.ForeColor = System.Drawing.Color.Black;
             this.editarPagoButton.Location = new System.Drawing.Point(580, 265);
             this.editarPagoButton.Name = "editarPagoButton";
@@ -144,6 +145,7 @@ namespace ComidaRapida
             this.editarPagoButton.TabIndex = 16;
             this.editarPagoButton.Text = "Editar pago";
             this.editarPagoButton.UseVisualStyleBackColor = false;
+            this.editarPagoButton.Click += new System.EventHandler(this.editarPagoButton_Click);
             // 
             // exPic
             // 
@@ -189,7 +191,6 @@ namespace ComidaRapida
             this.Name = "PedidoConfirmar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidoConfirmar";
-            //this.Load += new System.EventHandler(this.PedidoConfirmar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.exPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minimPic)).EndInit();
             this.ResumeLayout(false);

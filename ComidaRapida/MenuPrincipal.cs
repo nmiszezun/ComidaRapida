@@ -12,16 +12,22 @@ namespace ComidaRapida
 {
     public partial class MenuPrincipal : Form
     {
-        public MenuPrincipal()
+        List<Producto> productos;
+        List<Pedido> pedidos;
+        Pedido pedidoActual;
+
+        public MenuPrincipal(List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual)
         {
+            this.productos = productos;
+            this.pedidos = pedidos;
+            this.pedidoActual = pedidoActual;
             InitializeComponent();
         }
 
         private void nuevoPedidoButton_Click(object sender, EventArgs e)
         {
-           
-            //var pedido = new PedidoProductos();
-            //pedido.Show();
+            var pp = new PedidoProductos(productos, pedidoActual);
+            pp.Show();
         }
 
         private void minimizePic_Click(object sender, EventArgs e)

@@ -43,5 +43,30 @@ namespace ComidaRapida
         {
             this.Close();
         }
+
+        private void editarPedidoButton_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.OfType<PedidoProductos>().ElementAt(0).Show();
+            this.Close();
+        }
+
+        private void editarPagoButton_Click(object sender, EventArgs e)
+        {
+            Application.OpenForms.OfType<PedidoPago>().ElementAt(0).Show();
+            this.Close();
+        }
+
+        private void cancelarPedidoButton_Click(object sender, EventArgs e)
+        {
+            var confirmResult = MessageBox.Show("¿Está seguro que desea cancelar?", "Confirmar.", MessageBoxButtons.YesNo);
+            if (confirmResult == DialogResult.Yes)
+            {
+                pedidoActual = new Pedido();
+                Application.OpenForms.OfType<PedidoProductos>().ElementAt(0).Close();
+                Application.OpenForms.OfType<PedidoPago>().ElementAt(0).Close();
+                Application.OpenForms.OfType<MenuPrincipal>().ElementAt(0).Show();
+                this.Close();
+            }
+        }
     }
 }
