@@ -177,6 +177,7 @@ namespace ComidaRapida
             this.exitPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.exitPic1.TabIndex = 22;
             this.exitPic1.TabStop = false;
+            this.exitPic1.Click += new System.EventHandler(this.exitPic1_Click);
             // 
             // minPic1
             // 
@@ -188,6 +189,7 @@ namespace ComidaRapida
             this.minPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.minPic1.TabIndex = 21;
             this.minPic1.TabStop = false;
+            this.minPic1.Click += new System.EventHandler(this.minPic1_Click);
             // 
             // PedidoProductos
             // 

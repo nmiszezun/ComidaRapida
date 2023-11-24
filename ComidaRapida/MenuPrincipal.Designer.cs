@@ -77,7 +77,7 @@ namespace ComidaRapida
             this.salirButton.Name = "salirButton";
             this.salirButton.Size = new System.Drawing.Size(200, 52);
             this.salirButton.TabIndex = 2;
-            this.salirButton.Text = "Salir";
+            this.salirButton.Text = "Log out";
             this.salirButton.UseVisualStyleBackColor = false;
             this.salirButton.Click += new System.EventHandler(this.exitPic_Click);
             // 

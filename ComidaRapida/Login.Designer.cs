@@ -55,6 +55,7 @@ namespace ComidaRapida
             this.usuarioTextBox.Size = new System.Drawing.Size(408, 19);
             this.usuarioTextBox.TabIndex = 0;
             this.usuarioTextBox.Text = "USUARIO";
+            this.usuarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Ingresar_Enter);
             this.usuarioTextBox.MouseEnter += new System.EventHandler(this.usuarioTextBox_MouseEnter);
             // 
             // contraseniaTextBox
@@ -68,6 +69,7 @@ namespace ComidaRapida
             this.contraseniaTextBox.Size = new System.Drawing.Size(408, 19);
             this.contraseniaTextBox.TabIndex = 1;
             this.contraseniaTextBox.Text = "CONTRASEÑA";
+            this.contraseniaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Ingresar_Enter);
             this.contraseniaTextBox.Leave += new System.EventHandler(this.contraseniaTextBox_Leave);
             this.contraseniaTextBox.MouseEnter += new System.EventHandler(this.contraseniaTextBox_MouseEnter);
             // 

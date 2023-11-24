@@ -164,5 +164,16 @@ namespace ComidaRapida
         {
             this.Close();
         }
+
+        private void minPic1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void exitPic1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

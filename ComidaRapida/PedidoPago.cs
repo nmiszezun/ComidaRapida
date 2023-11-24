@@ -30,17 +30,23 @@ namespace ComidaRapida
         private void SeleccionarEfectivo ()
         {
             pagadoTextBox.ReadOnly = false;
+            pagadoTextBox.TabStop = true;
 
             numeroTextBox.ReadOnly = true;
+            numeroTextBox.TabStop = false;
             nombreTextBox.ReadOnly = true;
+            nombreTextBox.TabStop = false;
         }
 
         private void SeleccionarTarjeta ()
         {
             pagadoTextBox.ReadOnly = true;
+            pagadoTextBox.TabStop = false;
 
             numeroTextBox.ReadOnly = false;
+            numeroTextBox.TabStop = true;
             nombreTextBox.ReadOnly = false;
+            nombreTextBox.TabStop = true;
         }
 
         private void PedidoPago_Load(object sender, EventArgs e)

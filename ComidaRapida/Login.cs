@@ -56,6 +56,14 @@ namespace ComidaRapida
             }
         }
 
+        private void Ingresar_Enter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                ingresarButton_Click(sender, e);
+            }
+        }
+
         private void usuarioTextBox_MouseEnter(object sender, EventArgs e)
         {
             if (usuarioTextBox.Text == "USUARIO")
@@ -106,7 +114,5 @@ namespace ComidaRapida
         {
             this.WindowState = FormWindowState.Minimized;
         }
-
-        
     }
 }

@@ -69,7 +69,7 @@ namespace ComidaRapida
             this.pagadoTextBox.Location = new System.Drawing.Point(301, 151);
             this.pagadoTextBox.Name = "pagadoTextBox";
             this.pagadoTextBox.Size = new System.Drawing.Size(115, 26);
-            this.pagadoTextBox.TabIndex = 3;
+            this.pagadoTextBox.TabIndex = 2;
             this.pagadoTextBox.TextChanged += new System.EventHandler(this.pagadoTextBox_TextChanged);
             // 
             // efectivoRadioButton
@@ -80,7 +80,8 @@ namespace ComidaRapida
             this.efectivoRadioButton.Location = new System.Drawing.Point(49, 149);
             this.efectivoRadioButton.Name = "efectivoRadioButton";
             this.efectivoRadioButton.Size = new System.Drawing.Size(94, 28);
-            this.efectivoRadioButton.TabIndex = 4;
+            this.efectivoRadioButton.TabIndex = 0;
+            this.efectivoRadioButton.TabStop = true;
             this.efectivoRadioButton.Text = "Efectivo";
             this.efectivoRadioButton.UseVisualStyleBackColor = true;
             this.efectivoRadioButton.CheckedChanged += new System.EventHandler(this.efectivoRadioButton_CheckedChanged);
@@ -93,7 +94,8 @@ namespace ComidaRapida
             this.tarjetaRadioButton.Location = new System.Drawing.Point(49, 211);
             this.tarjetaRadioButton.Name = "tarjetaRadioButton";
             this.tarjetaRadioButton.Size = new System.Drawing.Size(85, 28);
-            this.tarjetaRadioButton.TabIndex = 5;
+            this.tarjetaRadioButton.TabIndex = 1;
+            this.tarjetaRadioButton.TabStop = true;
             this.tarjetaRadioButton.Text = "Tarjeta";
             this.tarjetaRadioButton.UseVisualStyleBackColor = true;
             this.tarjetaRadioButton.CheckedChanged += new System.EventHandler(this.tarjetaRadioButton_CheckedChanged);
@@ -128,7 +130,8 @@ namespace ComidaRapida
             this.vueltoTextBox.Name = "vueltoTextBox";
             this.vueltoTextBox.ReadOnly = true;
             this.vueltoTextBox.Size = new System.Drawing.Size(124, 26);
-            this.vueltoTextBox.TabIndex = 7;
+            this.vueltoTextBox.TabIndex = 3;
+            this.vueltoTextBox.TabStop = false;
             // 
             // numeroLabel
             // 
@@ -148,7 +151,7 @@ namespace ComidaRapida
             this.numeroTextBox.Location = new System.Drawing.Point(301, 219);
             this.numeroTextBox.Name = "numeroTextBox";
             this.numeroTextBox.Size = new System.Drawing.Size(345, 26);
-            this.numeroTextBox.TabIndex = 9;
+            this.numeroTextBox.TabIndex = 4;
             // 
             // volverButton
             // 
@@ -160,7 +163,7 @@ namespace ComidaRapida
             this.volverButton.Location = new System.Drawing.Point(31, 374);
             this.volverButton.Name = "volverButton";
             this.volverButton.Size = new System.Drawing.Size(200, 52);
-            this.volverButton.TabIndex = 11;
+            this.volverButton.TabIndex = 6;
             this.volverButton.Text = "Volver";
             this.volverButton.UseVisualStyleBackColor = false;
             this.volverButton.Click += new System.EventHandler(this.volverButton_Click);
@@ -175,7 +178,7 @@ namespace ComidaRapida
             this.confirmarButton.Location = new System.Drawing.Point(486, 374);
             this.confirmarButton.Name = "confirmarButton";
             this.confirmarButton.Size = new System.Drawing.Size(200, 52);
-            this.confirmarButton.TabIndex = 12;
+            this.confirmarButton.TabIndex = 7;
             this.confirmarButton.Text = "Confirmar pago";
             this.confirmarButton.UseVisualStyleBackColor = false;
             this.confirmarButton.Click += new System.EventHandler(this.confirmarButton_Click);
@@ -205,7 +208,7 @@ namespace ComidaRapida
             this.nombreTextBox.Location = new System.Drawing.Point(301, 278);
             this.nombreTextBox.Name = "nombreTextBox";
             this.nombreTextBox.Size = new System.Drawing.Size(345, 26);
-            this.nombreTextBox.TabIndex = 15;
+            this.nombreTextBox.TabIndex = 5;
             // 
             // exitPic1
             // 
@@ -250,6 +253,7 @@ namespace ComidaRapida
             this.importeTotalTextBox.ReadOnly = true;
             this.importeTotalTextBox.Size = new System.Drawing.Size(115, 26);
             this.importeTotalTextBox.TabIndex = 22;
+            this.importeTotalTextBox.TabStop = false;
             // 
             // PedidoPago
             // 
