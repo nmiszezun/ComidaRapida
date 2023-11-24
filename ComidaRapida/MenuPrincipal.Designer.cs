@@ -85,7 +85,7 @@ namespace ComidaRapida
             // 
             this.minimizePic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.minimizePic.Image = ((System.Drawing.Image)(resources.GetObject("minimizePic.Image")));
-            this.minimizePic.Location = new System.Drawing.Point(710, 12);
+            this.minimizePic.Location = new System.Drawing.Point(712, 12);
             this.minimizePic.Name = "minimizePic";
             this.minimizePic.Size = new System.Drawing.Size(19, 15);
             this.minimizePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +97,7 @@ namespace ComidaRapida
             // 
             this.exitPic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(15)))), ((int)(((byte)(57)))));
             this.exitPic.Image = ((System.Drawing.Image)(resources.GetObject("exitPic.Image")));
-            this.exitPic.Location = new System.Drawing.Point(735, 13);
+            this.exitPic.Location = new System.Drawing.Point(745, 12);
             this.exitPic.Name = "exitPic";
             this.exitPic.Size = new System.Drawing.Size(19, 15);
             this.exitPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

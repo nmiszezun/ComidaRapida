@@ -30,6 +30,7 @@ namespace ComidaRapida
         private void InitializeComponent()
         {
             System.Windows.Forms.Button cancelarButton;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoProductos));
             this.pedidoGrid = new System.Windows.Forms.DataGridView();
             this.pedidoLabel = new System.Windows.Forms.Label();
             this.agregarLabel = new System.Windows.Forms.Label();
@@ -39,9 +40,13 @@ namespace ComidaRapida
             this.totalTextBox = new System.Windows.Forms.TextBox();
             this.agregarButton = new System.Windows.Forms.Button();
             this.confirmarButton = new System.Windows.Forms.Button();
+            this.exitPic1 = new System.Windows.Forms.PictureBox();
+            this.minPic1 = new System.Windows.Forms.PictureBox();
             cancelarButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pedidoGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minPic1)).BeginInit();
             this.SuspendLayout();
             // 
             // cancelarButton
@@ -162,12 +167,36 @@ namespace ComidaRapida
             this.confirmarButton.UseVisualStyleBackColor = false;
             this.confirmarButton.Click += new System.EventHandler(this.confirmarButton_Click);
             // 
+            // exitPic1
+            // 
+            this.exitPic1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(15)))), ((int)(((byte)(57)))));
+            this.exitPic1.Image = ((System.Drawing.Image)(resources.GetObject("exitPic1.Image")));
+            this.exitPic1.Location = new System.Drawing.Point(745, 12);
+            this.exitPic1.Name = "exitPic1";
+            this.exitPic1.Size = new System.Drawing.Size(19, 15);
+            this.exitPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.exitPic1.TabIndex = 22;
+            this.exitPic1.TabStop = false;
+            // 
+            // minPic1
+            // 
+            this.minPic1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.minPic1.Image = ((System.Drawing.Image)(resources.GetObject("minPic1.Image")));
+            this.minPic1.Location = new System.Drawing.Point(712, 12);
+            this.minPic1.Name = "minPic1";
+            this.minPic1.Size = new System.Drawing.Size(19, 15);
+            this.minPic1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.minPic1.TabIndex = 21;
+            this.minPic1.TabStop = false;
+            // 
             // PedidoProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.exitPic1);
+            this.Controls.Add(this.minPic1);
             this.Controls.Add(this.confirmarButton);
             this.Controls.Add(cancelarButton);
             this.Controls.Add(this.agregarButton);
@@ -186,6 +215,8 @@ namespace ComidaRapida
             this.Load += new System.EventHandler(this.PedidoProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pedidoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitPic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.minPic1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +233,7 @@ namespace ComidaRapida
         private System.Windows.Forms.TextBox totalTextBox;
         private System.Windows.Forms.Button agregarButton;
         private System.Windows.Forms.Button confirmarButton;
+        private System.Windows.Forms.PictureBox exitPic1;
+        private System.Windows.Forms.PictureBox minPic1;
     }
 }

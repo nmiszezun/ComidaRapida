@@ -112,9 +112,9 @@ namespace ComidaRapida
             // btnMinimizar
             // 
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(706, 12);
+            this.btnMinimizar.Location = new System.Drawing.Point(712, 12);
             this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(43, 15);
+            this.btnMinimizar.Size = new System.Drawing.Size(19, 15);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnMinimizar.TabIndex = 7;
             this.btnMinimizar.TabStop = false;
@@ -123,9 +123,9 @@ namespace ComidaRapida
             // btnCerrar
             // 
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
-            this.btnCerrar.Location = new System.Drawing.Point(755, 12);
+            this.btnCerrar.Location = new System.Drawing.Point(745, 12);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(33, 15);
+            this.btnCerrar.Size = new System.Drawing.Size(19, 15);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnCerrar.TabIndex = 8;
             this.btnCerrar.TabStop = false;
