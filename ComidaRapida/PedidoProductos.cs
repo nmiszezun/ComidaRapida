@@ -16,5 +16,10 @@ namespace ComidaRapida
         {
             InitializeComponent();
         }
+
+        private void PedidoProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

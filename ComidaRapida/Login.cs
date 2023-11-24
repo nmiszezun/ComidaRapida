@@ -22,5 +22,63 @@ namespace ComidaRapida
             var menuPrincipal = new MenuPrincipal();
             menuPrincipal.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuarioTextBox_MouseEnter(object sender, EventArgs e)
+        {
+            if (usuarioTextBox.Text == "USUARIO")
+            {
+                usuarioTextBox.Text = "";
+                usuarioTextBox.ForeColor = Color.Gray;
+            }
+        }
+        private void usuarioTextBox_Leave(object sender, EventArgs e)
+        {
+            if (usuarioTextBox.Text == "")
+            {
+                usuarioTextBox.Text = "USUARIO";
+               // usuarioTextBox.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void contraseniaTextBox_MouseEnter(object sender, EventArgs e)
+        {
+
+
+            if (contraseniaTextBox.Text == "CONTRASEÑA")
+            {
+               contraseniaTextBox.Text = "";
+               //contraseniaTextBox.ForeColor = Color.Gray;
+               contraseniaTextBox.UseSystemPasswordChar = true;
+            }
+
+        }
+
+        private void contraseniaTextBox_Leave(object sender, EventArgs e)
+        {
+
+            if (contraseniaTextBox.Text == "")
+            {
+                contraseniaTextBox.Text = "CONTRASEÑA";
+                contraseniaTextBox.ForeColor = Color.DimGray;
+                contraseniaTextBox.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        
     }
 }

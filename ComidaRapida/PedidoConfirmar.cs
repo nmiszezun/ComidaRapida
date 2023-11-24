@@ -16,5 +16,15 @@ namespace ComidaRapida
         {
             InitializeComponent();
         }
+
+        private void minimPic_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;   
+        }
+
+        private void exPic_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
