@@ -12,22 +12,20 @@ namespace ComidaRapida
 {
     public partial class MenuPrincipal : Form
     {
-        List<Producto> productos;
-        List<Pedido> pedidos;
         Pedido pedidoActual;
         Usuario usuarioLogueado;
 
-        public MenuPrincipal(List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual, Usuario usuario)
+        public MenuPrincipal(Usuario usuario)
         {
-            this.productos = productos;
-            this.pedidos = pedidos;
-            this.pedidoActual = pedidoActual;
+            this.pedidoActual = new Pedido();
             this.usuarioLogueado = usuario;
             InitializeComponent();
+            bienvenidoLabel.Text = $"Bienvenido, {usuario.GetNombre()}";
         }
 
         private void nuevoPedidoButton_Click(object sender, EventArgs e)
         {
+            pedidoActual = new Pedido();
             pedidoActual.SetUsuario(usuarioLogueado);
 
             var listaForm = Application.OpenForms.OfType<PedidoProductos>();
@@ -37,7 +35,7 @@ namespace ComidaRapida
             }
             else
             {
-                var pp = new PedidoProductos(productos, pedidos, pedidoActual);
+                var pp = new PedidoProductos(pedidoActual);
                 pp.Show();
             }
         }

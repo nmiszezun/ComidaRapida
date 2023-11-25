@@ -55,8 +55,10 @@ namespace ComidaRapida
             this.usuarioTextBox.Size = new System.Drawing.Size(408, 19);
             this.usuarioTextBox.TabIndex = 0;
             this.usuarioTextBox.Text = "USUARIO";
+            this.usuarioTextBox.Enter += new System.EventHandler(this.usuarioTextBox_Enter);
             this.usuarioTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Ingresar_Enter);
             this.usuarioTextBox.MouseEnter += new System.EventHandler(this.usuarioTextBox_MouseEnter);
+            this.usuarioTextBox.MouseLeave += new System.EventHandler(this.usuarioTextBox_Leave);
             // 
             // contraseniaTextBox
             // 
@@ -69,9 +71,11 @@ namespace ComidaRapida
             this.contraseniaTextBox.Size = new System.Drawing.Size(408, 19);
             this.contraseniaTextBox.TabIndex = 1;
             this.contraseniaTextBox.Text = "CONTRASEÑA";
+            this.contraseniaTextBox.Enter += new System.EventHandler(this.contraseniaTextBox_Enter);
             this.contraseniaTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Ingresar_Enter);
             this.contraseniaTextBox.Leave += new System.EventHandler(this.contraseniaTextBox_Leave);
             this.contraseniaTextBox.MouseEnter += new System.EventHandler(this.contraseniaTextBox_MouseEnter);
+            this.contraseniaTextBox.MouseLeave += new System.EventHandler(this.contraseniaTextBox_Leave);
             // 
             // ingresarButton
             // 
@@ -158,6 +162,7 @@ namespace ComidaRapida
             this.Controls.Add(this.contraseniaTextBox);
             this.Controls.Add(this.usuarioTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

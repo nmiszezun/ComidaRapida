@@ -30,6 +30,9 @@ namespace ComidaRapida
         private void InitializeComponent()
         {
             System.Windows.Forms.Button cancelarButton;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoProductos));
             this.pedidoGrid = new System.Windows.Forms.DataGridView();
             this.pedidoLabel = new System.Windows.Forms.Label();
@@ -69,11 +72,31 @@ namespace ComidaRapida
             this.pedidoGrid.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pedidoGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pedidoGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.pedidoGrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.pedidoGrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(157)))), ((int)(((byte)(194)))));
             this.pedidoGrid.Location = new System.Drawing.Point(109, 182);
             this.pedidoGrid.Name = "pedidoGrid";
+            this.pedidoGrid.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.pedidoGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.pedidoGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.pedidoGrid.Size = new System.Drawing.Size(569, 150);
             this.pedidoGrid.TabIndex = 0;
+            this.pedidoGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.pedidoGrid_CellClick);
             // 
             // pedidoLabel
             // 
@@ -211,10 +234,10 @@ namespace ComidaRapida
             this.Controls.Add(this.pedidoGrid);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PedidoProductos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidoProductos";
-            this.Load += new System.EventHandler(this.PedidoProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pedidoGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cantidadInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.exitPic1)).EndInit();

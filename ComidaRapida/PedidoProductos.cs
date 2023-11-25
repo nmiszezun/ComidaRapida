@@ -7,31 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ComidaRapida
 {
     public partial class PedidoProductos : Form
     {
         List<Producto> listaProductos;
-        List<Pedido> pedidos;
         Pedido pedidoActual;
         DataTable tablaDetalle;
 
-        public PedidoProductos(List<Producto> listaProductos, List<Pedido> pedidos, Pedido pedidoActual)
+        public PedidoProductos(Pedido pedidoActual)
         {
-            this.listaProductos = listaProductos; //temporal, hasta ser reemplazado por una llamada a la BD
-            this.pedidos = pedidos; //temporal, hasta ser reemplazado por una llamada a la BD
+            this.listaProductos = new List<Producto>();
             this.pedidoActual = pedidoActual; //temporal, hasta ser reemplazado por una llamada a la BD
             InitializeComponent();
+            CargarProductos();
             LlenarComboBox();
             CrearDataTable();
             LlenarDataTable();
             MostrarDataTable();
-        }
-
-        private void PedidoProductos_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void CrearDataTable()
@@ -69,6 +64,7 @@ namespace ComidaRapida
 
         private void LlenarDataTable()
         {
+            tablaDetalle.Clear();
             DataRow fila;
 
             foreach (DetallePedido dp in pedidoActual.GetListaProductos())
@@ -97,7 +93,15 @@ namespace ComidaRapida
         {
             BindingSource bs = new BindingSource();
             bs.DataSource = tablaDetalle;
+
             pedidoGrid.DataSource = bs;
+
+            DataGridViewButtonColumn columnaBorrar = new DataGridViewButtonColumn();
+            columnaBorrar.Name = "borrar";
+            columnaBorrar.Text = "Borrar ítem";
+            columnaBorrar.UseColumnTextForButtonValue = true;
+            pedidoGrid.Columns.Insert(3, columnaBorrar);
+
         }
 
         private void LlenarComboBox()
@@ -110,30 +114,20 @@ namespace ComidaRapida
             agregarComboBox.Items.AddRange(listaComboBox);
         }
 
-        private void ActualizarLista()
-        {
-            // los valores están en el grid, pero no los muestra
-
-            /*pedidoGrid.Rows.Clear();
-            DataGridViewRow dgvr = new DataGridViewRow();
-            foreach (DetallePedido dp in pedidoActual.GetListaProductos())
-            {
-                pedidoGrid.Rows.Add(new string[] { dp.GetCantidad().ToString(), dp.GetProducto().GetNombre(), dp.GetPrecio().ToString() });
-            }
-            pedidoGrid.Refresh();
-            pedidoGrid.Update();*/
-        }
-
         private void agregarButton_Click(object sender, EventArgs e)
         {
-            Producto productoAgregar = listaProductos.ElementAt(agregarComboBox.SelectedIndex);
+            int indice = agregarComboBox.SelectedIndex;
             int cantidadAgregar = (int)cantidadInput.Value;
-            pedidoActual.AddProducto(productoAgregar, cantidadAgregar);
+            if (indice > 0 && cantidadAgregar > 0)
+            {
+                Producto productoAgregar = listaProductos.ElementAt(indice);
+                cantidadAgregar = (int)cantidadInput.Value;
+                pedidoActual.AgregarProducto(productoAgregar, cantidadAgregar);
 
-            CambiarTotal();
+                CambiarTotal();
 
-            AgregarUltimaFilaDataTable();
-            //ActualizarLista();
+                AgregarUltimaFilaDataTable();
+            }
         }
 
         private void CambiarTotal()
@@ -155,7 +149,7 @@ namespace ComidaRapida
             }
             else
             {
-                var pp = new PedidoPago(pedidos, pedidoActual);
+                var pp = new PedidoPago(pedidoActual);
                 pp.Show();
             }
         }
@@ -175,5 +169,55 @@ namespace ComidaRapida
             this.Close();
         }
 
+        private void CargarProductos()
+        {
+            //variables de configuración
+            string ubicacion = $"C:\\ComidaRapida\\productos.txt";
+            string texto = "";
+            string[] linea;
+            string separador = "\t";
+
+            //inicialización de variables
+            int id, stock;
+            string nombre;
+            float precio;
+            Producto nuevoProducto;
+
+            //comienzo de lectura línea por línea
+            StreamReader sr = new StreamReader(ubicacion);
+            while (true)
+            {
+                texto = sr.ReadLine();
+
+                //sale cuando no quedan líneas por leer
+                if (texto == null || texto == "")
+                {
+                    break;
+                }
+
+                //divide la línea en tabulaciones
+                linea = texto.Split(separador.ToCharArray());
+
+                //completa las variables según cada tabulación
+                id = int.Parse(linea[0]);
+                nombre = linea[1];
+                stock = int.Parse(linea[2]);
+                precio = float.Parse(linea[3]);
+
+                //crea el objeto, y lo carga en la lista
+                nuevoProducto = new Producto(id, nombre, stock, precio);
+                listaProductos.Add(nuevoProducto);
+            }
+        }
+
+        private void pedidoGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == pedidoGrid.Columns["borrar"].Index)
+            {
+                pedidoActual.BorrarProducto(e.RowIndex);
+                LlenarDataTable();
+                CambiarTotal();
+            }
+        }
     }
 }

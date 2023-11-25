@@ -12,14 +12,12 @@ namespace ComidaRapida
 {
     public partial class PedidoPago : Form
     {
-        List<Pedido> pedidos;
         Pedido pedidoActual;
         float pagado;
         float vuelto;
 
-        public PedidoPago(List<Pedido> pedidos, Pedido pedidoActual)
+        public PedidoPago(Pedido pedidoActual)
         {
-            this.pedidos = pedidos;
             this.pedidoActual = pedidoActual;
             InitializeComponent();
             importeTotalTextBox.Text = $"$ {pedidoActual.GetPago().GetImporteTotal()}";
@@ -49,11 +47,6 @@ namespace ComidaRapida
             nombreTextBox.TabStop = true;
         }
 
-        private void PedidoPago_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void minPic1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -66,13 +59,21 @@ namespace ComidaRapida
 
         private void confirmarButton_Click(object sender, EventArgs e)
         {
+            bool pagoCorrecto = true;
             if (efectivoRadioButton.Checked == true)
             {
-                PagoEfectivo pe = new PagoEfectivo(
-                    pedidoActual.GetPago().GetImporteTotal(),
-                    pagado,
-                    vuelto);
-                pedidoActual.SetPago(pe);
+                if (pagado < pedidoActual.GetPago().GetImporteTotal())
+                {
+                    MessageBox.Show("El pago es insuficiente. Ingrese un importe igual o mayor al total.");
+                    pagoCorrecto = false;
+                } else
+                {
+                    PagoEfectivo pe = new PagoEfectivo(
+                        pedidoActual.GetPago().GetImporteTotal(),
+                        pagado,
+                        vuelto);
+                    pedidoActual.SetPago(pe);
+                }
             }
             else
             {
@@ -83,15 +84,18 @@ namespace ComidaRapida
                 pedidoActual.SetPago(pt);
             }
 
-            var listaForm = Application.OpenForms.OfType<PedidoConfirmar>();
-            if (listaForm.Count() > 0)
+            if (pagoCorrecto)
             {
-                listaForm.ElementAt(0).Show();
-            }
-            else
-            {
-                var pc = new PedidoConfirmar(pedidos, pedidoActual);
-                pc.Show();
+                var listaForm = Application.OpenForms.OfType<PedidoConfirmar>();
+                if (listaForm.Count() > 0)
+                {
+                    listaForm.ElementAt(0).Show();
+                }
+                else
+                {
+                    var pc = new PedidoConfirmar(pedidoActual);
+                    pc.Show();
+                }
             }
         }
 

@@ -88,10 +88,26 @@ namespace ComidaRapida
             return listaProductos;
         }
 
-        public void AddProducto(Producto producto, int cantidad)
+        public void AgregarProducto(Producto producto, int cantidad)
         {
             listaProductos.Add(new DetallePedido(producto, cantidad));
-            pago.SetImporteTotal(pago.GetImporteTotal() + producto.GetPrecio() * cantidad);
+            CalcularImporteTotal();
+        }
+
+        public void BorrarProducto(int indice)
+        {
+            listaProductos.RemoveAt(indice);
+            CalcularImporteTotal();
+        }
+
+        private void CalcularImporteTotal ()
+        {
+            float importe = 0;
+            foreach (DetallePedido dp in listaProductos)
+            {
+                importe += dp.GetPrecio();
+            }
+            pago.SetImporteTotal(importe);
         }
 
         public override string ToString()

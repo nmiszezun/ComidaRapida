@@ -34,7 +34,7 @@ namespace ComidaRapida
 
         public override string ToString()
         {
-            return $"Efectivo: $ {GetImporteTotal()}";
+            return $"Efectivo: $ {GetImporteTotal()} (Recibido: $ {efectivoRecibido}, vuelto: $ {vueltoEntregado})";
         }
     }
 }

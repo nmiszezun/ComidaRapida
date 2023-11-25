@@ -280,10 +280,10 @@ namespace ComidaRapida
             this.Controls.Add(this.pagadoTextBox);
             this.Controls.Add(this.medioDePagoLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PedidoPago";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidoPago";
-            this.Load += new System.EventHandler(this.PedidoPago_Load);
             ((System.ComponentModel.ISupportInitialize)(this.exitPic1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.minPic1)).EndInit();
             this.ResumeLayout(false);

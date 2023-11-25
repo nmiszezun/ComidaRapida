@@ -7,25 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ComidaRapida
 {
     public partial class Login : Form
     {
         List<Usuario> usuarios;
-        List<Producto> productos;
-        List<Pedido> pedidos;
-        Pedido pedidoActual;
 
         Usuario usuarioLogueado;
 
-        public Login(List<Usuario> usuarios, List<Producto> productos, List<Pedido> pedidos, Pedido pedidoActual)
+        public Login()
         {
-            this.usuarios = usuarios;
-            this.productos = productos;
-            this.pedidos = pedidos;
-            this.pedidoActual = pedidoActual;
+            this.usuarios = new List<Usuario>();
             InitializeComponent();
+            CargarUsuarios();
         }
 
         private void ingresarButton_Click(object sender, EventArgs e)
@@ -50,7 +46,7 @@ namespace ComidaRapida
                 }
                 else
                 {
-                    var menuPrincipal = new MenuPrincipal(productos, pedidos, pedidoActual, usuarioLogueado);
+                    var menuPrincipal = new MenuPrincipal(usuarioLogueado);
                     menuPrincipal.Show();
                 }
             }
@@ -114,5 +110,56 @@ namespace ComidaRapida
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void usuarioTextBox_Enter(object sender, EventArgs e)
+        {
+            usuarioTextBox.SelectAll();
+        }
+
+        private void contraseniaTextBox_Enter(object sender, EventArgs e)
+        {
+            contraseniaTextBox.SelectAll();
+        }
+
+        private void CargarUsuarios()
+        {
+            //variables de configuración
+            string ubicacion = $"C:\\ComidaRapida\\usuarios.txt";
+            string texto = "";
+            string[] linea;
+            string separador = "\t";
+
+            //creación de variables
+            int id;
+            string usuario, clave;
+            Usuario nuevoUsuario;
+
+            //comienzo de lectura línea por línea
+            StreamReader sr = new StreamReader(ubicacion);
+            while (true)
+            {
+                texto = sr.ReadLine();
+
+                //sale cuando no quedan líneas por leer
+                if (texto == null || texto == "")
+                {
+                    break;
+                }
+
+                //divide la línea en tabulaciones
+                linea = texto.Split(separador.ToCharArray());
+
+                //completa las variables según cada tabulación
+                id = int.Parse(linea[0]);
+                usuario = linea[1];
+                clave = linea[2];
+
+                //crea el objeto, y lo carga en la lista
+                nuevoUsuario = new Usuario(id, usuario, clave);
+                usuarios.Add(nuevoUsuario);
+            }
+        }
+
+
     }
 }

@@ -189,6 +189,7 @@ namespace ComidaRapida
             this.Controls.Add(this.pedidoTextBox);
             this.Controls.Add(this.chequearPedidoLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PedidoConfirmar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PedidoConfirmar";
