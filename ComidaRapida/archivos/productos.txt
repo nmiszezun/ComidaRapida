@@ -1,0 +1,12 @@
+1	Coca-Cola	50	150
+2	Sprite	50	150
+3	Fanta	50	150
+4	Hamburguesa	50	200
+5	Hamburguesa con queso	50	250
+6	Hamburguesa completa	50	350
+7	Hamburguesa de pollo	50	250
+8	Papas fritas	50	100
+9	Ensalada	50	100
+10	Aros de cebolla	50	100
+11	Cono chocolate	50	150
+12	Cono vainilla	50	150
